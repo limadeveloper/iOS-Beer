@@ -120,6 +120,7 @@
 			buildConfigurationList = 82D387EA20B0700F00D4118D /* Build configuration list for PBXNativeTarget "Beer" */;
 			buildPhases = (
 				FD06116C8346D73114FFB96F /* [CP] Check Pods Manifest.lock */,
+				821C6C8120B078C60030A556 /* Swiftlint */,
 				82D387D420B0700D00D4118D /* Sources */,
 				82D387D520B0700D00D4118D /* Frameworks */,
 				82D387D620B0700D00D4118D /* Resources */,
@@ -180,6 +181,20 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		821C6C8120B078C60030A556 /* Swiftlint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = Swiftlint;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\"";
+		};
 		FD06116C8346D73114FFB96F /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
