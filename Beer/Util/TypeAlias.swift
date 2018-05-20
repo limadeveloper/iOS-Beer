@@ -10,6 +10,7 @@ import Foundation
 
 struct CompletionBlock {
   typealias FetchBeers = ([Beer]?, Error?) -> Void
+  typealias Empty = () -> Void
 }
 
 struct DataType {

@@ -42,6 +42,10 @@ class Network {
       completion(beers, response.error)
     }
   }
+  
+  func isConnectedToInternet() -> Bool {
+    return NetworkReachabilityManager()?.isReachable ?? false
+  }
 }
 
 // MARK: - Extensions

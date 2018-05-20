@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -93,14 +94,55 @@ Label</string>
             </objects>
             <point key="canvasLocation" x="1021.6" y="133.74384236453201"/>
         </scene>
+        <!--Details-->
+        <scene sceneID="MCh-SR-Nfx">
+            <objects>
+                <viewController storyboardIdentifier="DetailsViewController" title="Details" id="0qU-uH-JQl" customClass="DetailsViewController" customModule="Beer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9zQ-EX-blO">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="JpM-Hf-49B">
+                                <rect key="frame" x="20" y="60" width="335" height="406"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" editable="NO" text="Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor " textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="puw-1r-NKF">
+                                <rect key="frame" x="20" y="486" width="335" height="272"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="4j6-lu-NgR" firstAttribute="trailing" secondItem="JpM-Hf-49B" secondAttribute="trailing" constant="20" id="78H-e8-yOf"/>
+                            <constraint firstItem="4j6-lu-NgR" firstAttribute="bottom" secondItem="puw-1r-NKF" secondAttribute="bottom" constant="20" id="Fbs-kk-zso"/>
+                            <constraint firstItem="JpM-Hf-49B" firstAttribute="top" secondItem="4j6-lu-NgR" secondAttribute="top" constant="16" id="Nd9-Sc-f4F"/>
+                            <constraint firstItem="JpM-Hf-49B" firstAttribute="leading" secondItem="4j6-lu-NgR" secondAttribute="leading" constant="20" id="Wei-El-1tb"/>
+                            <constraint firstItem="JpM-Hf-49B" firstAttribute="height" secondItem="9zQ-EX-blO" secondAttribute="height" multiplier="0.5" id="bYT-r1-zXE"/>
+                            <constraint firstItem="puw-1r-NKF" firstAttribute="trailing" secondItem="JpM-Hf-49B" secondAttribute="trailing" id="c17-4v-ngK"/>
+                            <constraint firstItem="puw-1r-NKF" firstAttribute="leading" secondItem="JpM-Hf-49B" secondAttribute="leading" id="pq6-px-Sqx"/>
+                            <constraint firstItem="puw-1r-NKF" firstAttribute="top" secondItem="JpM-Hf-49B" secondAttribute="bottom" constant="20" id="sLq-Cz-f29"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="4j6-lu-NgR"/>
+                    </view>
+                    <connections>
+                        <outlet property="detailsTextView" destination="puw-1r-NKF" id="OHo-ck-ANy"/>
+                        <outlet property="photoImageView" destination="JpM-Hf-49B" id="kaL-yY-Rgg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gsi-r6-Vxm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1744.8" y="133.74384236453201"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="7JV-5Z-M69">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="paw-UK-4SV" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="HomeNavigationViewController" automaticallyAdjustsScrollViewInsets="NO" id="paw-UK-4SV" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="wva-mw-SfL">
                         <rect key="frame" x="0.0" y="44" width="375" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="0.86274509799999999" green="0.63137254899999995" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
