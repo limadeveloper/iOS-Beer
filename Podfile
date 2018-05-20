@@ -8,5 +8,7 @@ target 'Beer' do
 
   # Pods for Beer
   pod 'SwiftLint'
+  pod 'Alamofire'
+  pod 'AlamofireImage'
 
 end
