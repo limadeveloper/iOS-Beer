@@ -12,11 +12,11 @@ import Alamofire
 class Network {
   
   // MARK: - Properties
-  let shared = Network()
+  static let shared = Network()
   
   // MARK: - Enums
   enum EndPoint: String {
-    case beers = "beers?"
+    case beers
   }
   
   enum URLEndpoints: String {
@@ -33,7 +33,7 @@ class Network {
     let url = URL(string: URLEndpoints.api.rawValue + EndPoint.beers.rawValue)!
     
     let parameters: Parameters = [
-      ParameterKey.page.rawValue: page,
+      ParameterKey.page.rawValue: page
     ]
     
     Alamofire.request(url, method: .get, parameters: parameters).validate().responseJSON { response in

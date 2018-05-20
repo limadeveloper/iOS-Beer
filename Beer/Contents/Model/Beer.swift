@@ -9,5 +9,14 @@
 import Foundation
 
 struct Beer: Codable {
+  
   let id: Int
+  let name: String
+  let description: String
+  let imageURL: String
+  
+  private enum CodingKeys: String, CodingKey {
+    case id, name, description
+    case imageURL = "image_url"
+  }
 }
