@@ -14,9 +14,11 @@ struct Beer: Codable {
   let name: String
   let description: String
   let imageURL: String
+  let alcoholLevel: Double
   
   private enum CodingKeys: String, CodingKey {
     case id, name, description
     case imageURL = "image_url"
+    case alcoholLevel = "abv"
   }
 }

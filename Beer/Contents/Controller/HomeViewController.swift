@@ -13,12 +13,16 @@ class HomeViewController: UIViewController {
   // MARK: - Properties
   @IBOutlet weak private var tableView: UITableView!
   
+  // swiftlint:disable weak_delegate
+  private var dataSourceAndDelegate: DataSourceAndDelegate?
+  
   private var page = 1
   var beers = [Beer]()
   
   // MARK: - Overrides
   override func viewDidLoad() {
     super.viewDidLoad()
+    updateUI()
     loadData()
   }
   
@@ -35,5 +39,12 @@ class HomeViewController: UIViewController {
   
   private func updateUI() {
     
+    let footer = UIView(frame: .zero)
+    footer.backgroundColor = .white
+    tableView.tableFooterView = footer
+    
+    dataSourceAndDelegate = DataSourceAndDelegate(with: self)
+    tableView.dataSource = dataSourceAndDelegate
+    tableView.delegate = dataSourceAndDelegate
   }
 }
