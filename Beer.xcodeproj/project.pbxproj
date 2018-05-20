@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		821C6C8420B0BBBA0030A556 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821C6C8320B0BBBA0030A556 /* Network.swift */; };
+		82BFE12020B0C54C00A98532 /* TypeAlias.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82BFE11F20B0C54C00A98532 /* TypeAlias.swift */; };
+		82BFE12420B0F19500A98532 /* Beer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82BFE12320B0F19500A98532 /* Beer.swift */; };
 		82D387DC20B0700D00D4118D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D387DB20B0700D00D4118D /* AppDelegate.swift */; };
 		82D387DE20B0700D00D4118D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D387DD20B0700D00D4118D /* HomeViewController.swift */; };
 		82D387E120B0700D00D4118D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82D387DF20B0700D00D4118D /* Main.storyboard */; };
@@ -19,6 +21,8 @@
 /* Begin PBXFileReference section */
 		8177B379B80D2BA0EA4EF2E3 /* Pods-Beer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Beer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Beer/Pods-Beer.debug.xcconfig"; sourceTree = "<group>"; };
 		821C6C8320B0BBBA0030A556 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
+		82BFE11F20B0C54C00A98532 /* TypeAlias.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeAlias.swift; sourceTree = "<group>"; };
+		82BFE12320B0F19500A98532 /* Beer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Beer.swift; sourceTree = "<group>"; };
 		82D387D820B0700D00D4118D /* Beer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Beer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		82D387DB20B0700D00D4118D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		82D387DD20B0700D00D4118D /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -81,7 +85,8 @@
 		821C6C8020B071810030A556 /* Contents */ = {
 			isa = PBXGroup;
 			children = (
-				82D387DD20B0700D00D4118D /* HomeViewController.swift */,
+				82BFE12220B0F16B00A98532 /* Model */,
+				82BFE12120B0F15500A98532 /* Controller */,
 			);
 			path = Contents;
 			sourceTree = "<group>";
@@ -92,6 +97,30 @@
 				821C6C8320B0BBBA0030A556 /* Network.swift */,
 			);
 			path = Network;
+			sourceTree = "<group>";
+		};
+		82BFE11E20B0C4E600A98532 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				82BFE11F20B0C54C00A98532 /* TypeAlias.swift */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
+		82BFE12120B0F15500A98532 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				82D387DD20B0700D00D4118D /* HomeViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		82BFE12220B0F16B00A98532 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				82BFE12320B0F19500A98532 /* Beer.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		82D387CF20B0700D00D4118D = {
@@ -119,6 +148,7 @@
 				821C6C8020B071810030A556 /* Contents */,
 				821C6C7F20B071750030A556 /* Storyboard */,
 				821C6C8220B0BB9B0030A556 /* Network */,
+				82BFE11E20B0C4E600A98532 /* Util */,
 			);
 			path = Beer;
 			sourceTree = "<group>";
@@ -135,6 +165,7 @@
 				82D387D420B0700D00D4118D /* Sources */,
 				82D387D520B0700D00D4118D /* Frameworks */,
 				82D387D620B0700D00D4118D /* Resources */,
+				00FD1FFDD71A9E03604B4D19 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -192,6 +223,26 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		00FD1FFDD71A9E03604B4D19 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Beer/Pods-Beer-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Beer/Pods-Beer-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		821C6C8120B078C60030A556 /* Swiftlint */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -233,6 +284,8 @@
 			files = (
 				82D387DE20B0700D00D4118D /* HomeViewController.swift in Sources */,
 				82D387DC20B0700D00D4118D /* AppDelegate.swift in Sources */,
+				82BFE12420B0F19500A98532 /* Beer.swift in Sources */,
+				82BFE12020B0C54C00A98532 /* TypeAlias.swift in Sources */,
 				821C6C8420B0BBBA0030A556 /* Network.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
