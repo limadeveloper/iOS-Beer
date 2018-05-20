@@ -10,3 +10,7 @@ Show a list of beer 🍺 using the Punk API.
 
 **Dependencies**  
 - Swiftlint  
+
+**Images**  
+
+![Image](Docs/Images/screenshots/01.png)
