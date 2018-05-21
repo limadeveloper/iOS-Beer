@@ -14,3 +14,4 @@ Show a list of beer 🍺 using the Punk API.
 **Images**  
 
 ![Image](Docs/Images/screenshots/01.png)
+![Image](Docs/Images/screenshots/02.png)
