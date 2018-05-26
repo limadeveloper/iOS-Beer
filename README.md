@@ -10,6 +10,8 @@ Show a list of beer 🍺 using the Punk API.
 
 **Dependencies**  
 - Swiftlint  
+- Alamofire  
+- AlamofireImage
 
 **Images**  
 
